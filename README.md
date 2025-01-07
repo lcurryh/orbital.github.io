@@ -67,9 +67,10 @@ pip install -r requirements.txt  # install
 ## 🦄 Performance
 
 ### 🏕️ Complex Scenarios
-<div align="center">
-  <img src="<a href="https://sm.ms/image/Q4rDLewmOipT8g1" target="_blank"><img src="https://s2.loli.net/2025/01/07/Q4rDLewmOipT8g1.jpg" width=800 >
-
+<div style="text-align: center;">
+  <a href="https://sm.ms/image/Q4rDLewmOipT8g1" target="_blank">
+    <img src="https://s2.loli.net/2025/01/07/Q4rDLewmOipT8g1.jpg" width="800" alt="Image">
+  </a>
 </div>
 
 ## Feature enhancementh
