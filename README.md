@@ -8,17 +8,17 @@
 
 
 
-  ![](https://img.shields.io/badge/python-3.8.16-red)
-  [![](https://img.shields.io/badge/pytorch-1.13.1-red)](https://pytorch.org/)
-  [![](https://img.shields.io/badge/torchvision-0.14.1-red)](https://pypi.org/project/torchvision/)
-  [![](https://img.shields.io/badge/RT-DETR-red)](https://github.com/lyuwenyu/RT-DETR)
+  ![](https://img.shields.io/badge/python-3.8.16-lightblue)
+  [![](https://img.shields.io/badge/pytorch-1.13.1-lightblue)](https://pytorch.org/)
+  [![](https://img.shields.io/badge/torchvision-0.14.1-lightblue)](https://pypi.org/project/torchvision/)
+  [![](https://img.shields.io/badge/RT-DETR-lightblue)](https://github.com/lyuwenyu/RT-DETR)
   
   
 
   [🛠️Installation Dependencies](https://github.com/lyuwenyu/RT-DETR) |
   [🎤Introduction](https://github.com/lyuwenyu/RT-DETR) |
  
-  [👀Download Dataset](https://pan.baidu.com/s/11E3HcrAptlONr5ujbL-JdQ?pwd=DSRD )) |
+  [👀Download Dataset](https://pan.baidu.com/s/11E3HcrAptlONr5ujbL-JdQ? ) |
   
   [🌊Strawberries Detection](https://github.com/lcurryh/orbital.github.io) |
   [🚀Remote Sensing](https://github.com/lcurryh/orbital.github.io) |
