@@ -1,46 +1,90 @@
-# SR-YOLO-Dataset: Strawberry fruit target detection data set of different ripeness
 
- [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
+
+
+<h1 align="center">RT-DETR for Ripeness Detection of Strawberries in Complex Environments</h1>
+
+
+<div align="center">
+
+
+
+  ![](https://img.shields.io/badge/python-3.8.16-red)
+  [![](https://img.shields.io/badge/pytorch-1.13.1-red)](https://pytorch.org/)
+  [![](https://img.shields.io/badge/torchvision-0.14.1-red)](https://pypi.org/project/torchvision/)
+  [![](https://img.shields.io/badge/RT-DETR-red)](https://github.com/lyuwenyu/RT-DETR)
+  
+  
+
+  [🛠️Installation Dependencies](https://github.com/lyuwenyu/RT-DETR) |
+  [🎤Introduction](https://github.com/lyuwenyu/RT-DETR) |
  
+  [👀Download Dataset](https://github.com/lyuwenyu/RT-DETR )) |
+  
+  [🌊Strawberries Detection](https://github.com/lcurryh/orbital.github.io) |
+  [🚀Remote Sensing](https://github.com/lcurryh/orbital.github.io) |
+  [🤔End-to-End](https://github.com/lcurryh/orbital.github.io) |
+ 
+
+</div>
+
+
+
+This is the official implementation of papers 
+- [DETRs Beat YOLOs on Real-time Object Detection](https://arxiv.org/abs/2304.08069)
+
+
 ## Introduction
-This repository is built for:
 
-SR-YOLO-Dataset: A data set for target detection of strawberry
+**The purpose of this repository is to**:
+
+Combining the advantages of single-stage and end-to-end networks, this approach is designed to perform ripeness detection of strawberries with high efficiency and accuracy. By leveraging the simplicity and speed of single-stage networks alongside the precise feature modeling and comprehensive representation capabilities of end-to-end architectures, the proposed method effectively addresses the challenges of detecting strawberry ripeness in complex environments.
 
 
-The SR-YOLO-Dataset includes more than 15,000 photos of strawberries of different ripenness
+**The DSRD-Dataset includes more than 7700 photos of strawberries of different ripenness**：
+
+The DSRD dataset we created is a comprehensive image collection consisting of 7,700 images. It is compiled by combining the self-collected CaptStraw dataset, the publicly available StrawDI_Db1 dataset, and the StrawberryNet dataset. 
 
       
 
 ## How to use
-To train a network on the RS-YOLO-Dataset make sure that you download the code first from [yolo11](https://github.com/ultralytics/ultralytics). And then clone this repository to yolov8 folder and  train a yolo11 network with the commands below.
+Before training the network on the DSRD dataset, make sure to download the [RT-DETR](https://github.com/lyuwenyu/RT-DETR) code, clone this repository into the target folder, and then use the commands below to train the RT-DETR network.
+
 
 ```
-# Clone yolo11 repo and install requirements.txt
-git clone https://github.com/ultralytics/ultralytics  # clone
-cd yolo11
+# Clone RT-DETR repo and install requirements.txt
+git clone https://github.com/lyuwenyu/RT-DETR  # clone
 pip install -r requirements.txt  # install
 ```
 
-```
-# Clone this repository to yolo11 folder
-git clone https://github.com/ganyang0720/SR-YOLO
-```
 
-```
-# Train yolo11
-yolo detect train data=RS-YOLO-Dataset/dataset.yaml model=yolo11n.yaml epochs=200 imgsz=640
-```
+## 📍 Implementations
+- 🔥 RT-DETR 
+  - paddle: [code&weight](./rtdetr_paddle)
+  - pytorch: [code&weight](./rtdetr_pytorch)
 
 
 
-## License
+## 🦄 Performance
 
-This work is licensed under a
-[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].
+### 🏕️ Complex Scenarios
+<div align="center">
+  <img src="<a href="https://sm.ms/image/Q4rDLewmOipT8g1" target="_blank"><img src="https://s2.loli.net/2025/01/07/Q4rDLewmOipT8g1.jpg" width=800 >
 
-[![CC BY-NC-SA 4.0][cc-by-nc-sa-image]][cc-by-nc-sa]
+</div>
 
-[cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
-[cc-by-nc-sa-image]: https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png
-[cc-by-nc-sa-shield]: https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg
+## Feature enhancementh
+To improve the generalization ability of the model, we utilized the popular Albu library to enhance the diversity of training samples. This library provides more than 70 types of advanced image augmentation techniques, offering extensive flexibility in data preprocessing. By applying transformations such as rotation, cropping, flipping, and scaling, we effectively minimize the risk of overfitting. Moreover, techniques like brightness and contrast adjustments, noise addition, and color alterations allow the model to better adapt to various lighting conditions and complex environments. Additionally, specific augmentations such as elastic deformation and grid distortion simulate different perspectives and scale variations, further improving the accuracy of strawberry detection. The goal is to enable the strawberry detection algorithm to perform effectively across a wider range of training scenarios. The techniques used include:
+
+1）RGB Shift: Randomly alters the order of the image color channels, enhancing the model's adaptability to color variations.
+
+2）Shift Scale Rotate: Applies affine transformations to images, including translation, scaling, and rotation, enhancing the model's robustness to changes in target position and scale.
+	
+3）Hue Saturation Value: Randomly adjusts the hue and saturation of images, helping the model better adapt to different environments and scenes.
+
+4）	Random Brightness Contrast: Randomly adjusts the brightness and contrast of images to improve the model's adaptability to various lighting conditions.
+
+5）Channel Shuffle: Randomly shuffles the RGB channels of images, adjusting the color distribution to help the model better recognize different color display methods.
+
+6）Elastic Transform: Simulates the effect of images being distorted by elastic materials, aiding the model in learning to recognize non-rigid deformations that may be encountered in practical applications.
+
+7）Grid Distortion: Distorts images by periodically or randomly moving grid points, simulating camera lens distortions or other visual distortions, and training the model to identify objects in deformed visual inputs.
