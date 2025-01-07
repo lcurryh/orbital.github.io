@@ -18,7 +18,7 @@
   [🛠️Installation Dependencies](https://github.com/lyuwenyu/RT-DETR) |
   [🎤Introduction](https://github.com/lyuwenyu/RT-DETR) |
  
-  [👀Download Dataset](https://github.com/lyuwenyu/RT-DETR )) |
+  [👀Download Dataset](https://pan.baidu.com/s/11E3HcrAptlONr5ujbL-JdQ?pwd=DSRD )) |
   
   [🌊Strawberries Detection](https://github.com/lcurryh/orbital.github.io) |
   [🚀Remote Sensing](https://github.com/lcurryh/orbital.github.io) |
@@ -43,6 +43,8 @@ Combining the advantages of single-stage and end-to-end networks, this approach 
 **The DSRD-Dataset includes more than 7700 photos of strawberries of different ripenness**：
 
 The DSRD dataset we created is a comprehensive image collection consisting of 7,700 images. It is compiled by combining the self-collected CaptStraw dataset, the publicly available StrawDI_Db1 dataset, and the StrawberryNet dataset. 
+
+The extraction code for the DSRD dataset is DSRD.
 
       
 
